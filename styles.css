@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+body {
+  min-height: 100vh;
+  background: #333;
+}
+body video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  mix-blend-mode: overlay;
+}
+footer {
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  background: #00ff00;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+footer .social-links,
+.link-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .social-links,
+.link-tabs li {
+  list-style: none;
+}
+footer .social-links li a {
+  /*padding: 0.5rem;*/
+  font-size: 2em;
+  margin: 0 0.5rem;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.5s;
+  /*filter: invert(1);
+    transform: scale(0.5);
+    transition: 0.5s;
+    transform: scale(0.5) translateY(-15px)*/
+}
+footer .social-links li a:hover {
+  transform: translateY(-0.5rem);
+}
+footer .link-tabs li a {
+  /*padding: 0.5rem;*/
+  font-size: 0.85em;
+  margin: 1.5rem 0.5rem;
+  color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  opacity: 0.75;
+}
+footer .link-tabs li a:hover {
+  opacity: 1;
+}
+hr {
+  width: 90%;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  margin: 0.5rem auto;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 0.85em;
+}
+footer .anim_wave {
+  position: absolute;
+  top: -6rem;
+  left: 0;
+  width: 100vw;
+  height: 6rem;
+  background: url(./Green_wave.png);
+  background-size: 62rem 6rem;
+}
+footer .anim_wave#anim_wave_1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animate 4s linear infinite;
+}
+footer .anim_wave#anim_wave_2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 0.9375rem;
+  animation: animate_2 4s linear infinite;
+}
+footer .anim_wave#anim_wave_3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 0;
+  animation: animate 3s linear infinite;
+}
+footer .anim_wave#anim_wave_4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 1.25rem;
+  animation: animate_2 3s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position-x: 62rem;
+  }
+  100% {
+    background-position-x: 0rem;
+  }
+}
+@keyframes animate_2 {
+  0% {
+    background-position-x: 0rem;
+  }
+  100% {
+    background-position-x: 62rem;
+  }
+}
